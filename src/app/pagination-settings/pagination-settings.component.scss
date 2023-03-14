@@ -1,0 +1,21 @@
+/* TEMP STYLES */
+.type-button.active {
+    border-color: #2E62D9;
+}
+
+.type-button {
+    padding: 44px 19px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    // margin: 0 -10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    // padding: 0 5px;
+    margin-right: 5px;
+}

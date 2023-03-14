@@ -1,0 +1,25 @@
+<h1>Страница настроек</h1>
+
+<section>
+    <h2>Базовые настройки</h2>
+    <div class="item" *ngFor="let item of defaultConfigs; let index = index">
+        <input type="checkbox" [id]="'item' + index" [formControl]="controls.get(index + 1)!">
+        <label [for]="'item' + index">{{ item.title }}</label>
+    </div>
+</section>
+
+<section>
+    <h2>Настройки пагинации</h2>
+    <app-pagination-settings [formControl]="paginationCtrl"></app-pagination-settings>
+    <div>
+        <button (click)="setLoadType()">Set value via TS</button>
+    </div>
+    <!-- Вэтом элементе мы можем смотреть как меняется значение нашего форм-контрола -->
+    <pre>{{ paginationCtrl.value | json }}</pre>
+</section>
+
+<section *ngIf="value" style="padding-top: 40px;">
+    <hr>
+    <h2>Saved Value</h2>
+    <pre>{{ value | json }}</pre>
+</section>

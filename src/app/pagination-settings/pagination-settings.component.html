@@ -1,0 +1,11 @@
+<div class="row">
+    <ng-container *ngFor="let type of types">
+        <div class="col">
+            <button class="type-button" type="button" [ngClass]="{ 'active': type.isActive }"
+                (click)="changeType(type)">
+                <img [src]="type.viewSrc" alt="">
+            </button>
+            <p>{{ type.title }}</p>
+        </div>
+    </ng-container>
+</div>

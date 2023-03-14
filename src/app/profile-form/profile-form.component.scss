@@ -1,0 +1,61 @@
+:host {
+    display: block;
+    width: 500px;
+}
+
+
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+
+        &+label {
+            margin-left: 5px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background: none;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 15px;
+    background: rgb(27, 152, 255);
+    border: 1px solid rgb(24, 138, 231);
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+
+    &:hover {
+        background: rgb(24, 138, 231);
+    }
+}
